@@ -2,11 +2,14 @@ body {
     font-family: sans-serif;
     margin: 20px;
 }
-nav a {
+
+header nav a {
     margin-right: 10px;
     text-decoration: none;
     color: blue;
 }
+
 button {
     margin: 5px;
+    padding: 5px 10px;
 }
