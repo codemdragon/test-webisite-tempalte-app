@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test WebView App</title>
+    <title>WebView SPA Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <header>
+        <h1>Home Page</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="page1.html">Page 1</a> |
+            <a href="page2.html">Page 2</a>
+        </nav>
+    </header>
 
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js")
-        .then(() => console.log("Service Worker registered"))
-        .catch(console.error);
-}
-</script>
+    <main>
+        <section>
+            <h2>Counter (IndexedDB Demo)</h2>
+            <p>Current count: <span id="counter">0</span></p>
+            <button id="increase">Increase</button>
+            <button id="reset">Reset</button>
+        </section>
+    </main>
 
-    <body>
-    <h1>Home Page</h1>
-    <nav>
-        <a href="page1.html">Page 1</a> |
-        <a href="page2.html">Page 2</a>
-    </nav>
-
-    <section>
-        <h2>Counter</h2>
-        <p>Current count: <span id="counter">0</span></p>
-        <button id="increase">Increase</button>
-        <button id="reset">Reset</button>
-    </section>
-
-    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/sw.js")
+                .then(() => console.log("Service Worker registered"))
+                .catch(console.error);
+        }
+    </script>
 </body>
 </html>
