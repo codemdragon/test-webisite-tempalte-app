@@ -5,21 +5,20 @@
     <title>Page 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js")
-        .then(() => console.log("Service Worker registered"))
-        .catch(console.error);
-}
-</script>
-
 <body>
-    <h1>Page 1</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="page2.html">Page 2</a>
-    </nav>
-    <p>This is page 1.</p>
-    <script src="script.js"></script>
+    <header>
+        <h1>Page 1</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="page1.html">Page 1</a> |
+            <a href="page2.html">Page 2</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>This is page 1.</p>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
