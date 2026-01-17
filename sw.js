@@ -1,11 +1,11 @@
-const CACHE_NAME = "webview-test-cache-v1";
+const CACHE_NAME = "webview-spa-cache-v1";
 const urlsToCache = [
     "/",
     "/index.html",
     "/page1.html",
     "/page2.html",
     "/style.css",
-    "/script.js"
+    "/app.js"
 ];
 
 self.addEventListener("install", event => {
