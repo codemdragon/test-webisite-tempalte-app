@@ -5,7 +5,16 @@
     <title>Test WebView App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+    <script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(console.error);
+}
+</script>
+
+    <body>
     <h1>Home Page</h1>
     <nav>
         <a href="page1.html">Page 1</a> |
